@@ -59,12 +59,34 @@
       opacity: 1;
     }
   }
+
+  /* Styling for the separate image */
+  .separate-image {
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    object-fit: cover;
+    animation: fadeInImage 2s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInImage {
+    to {
+      opacity: 1;
+    }
+  }
 </style>
 </head>
 <body>
 
 <div class="egg"></div>
-<h1>Have an Eggcellent Day Shubham!</h1>
+
+<!-- Separate image on the page -->
+<img src="C:\Users\ICAI-PC\Downloads\Screenshot 2025-11-23 123655.png" alt="Cute Eggs" class="separate-image">
+
+<h1>Have an Eggcellent Day EXISTENTIAL CRISIS COMMITTEE!</h1>
 
 </body>
 </html>
