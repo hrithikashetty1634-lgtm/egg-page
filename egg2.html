@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Eggcellent Cracking Egg</title>
+<style>
+  body {
+    margin: 0;
+    background: #fff8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+  }
+
+  .egg-container {
+    width: 150px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  .egg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .half {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50% 50% 45% 45%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+  }
+
+  .top-half {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    top: 0;
+    left: 0;
+    transform-origin: bottom center;
+    z-index: 2;
+  }
+
+  .bottom-half {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    top: 0;
+    left: 0;
+    transform-origin: top center;
+  }
+
+  .yolk {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 60px;
+    height: 60px;
+    background: #ffd700;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffdd33;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  /* Cracked state */
+  .cracked .top-half {
+    transform: rotateX(-50deg) translateY(-60px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .cracked .bottom-half {
+    transform: rotateX(50deg) translateY(60px);
+    box-shadow: 0 10px 30px rgba(0,0,
