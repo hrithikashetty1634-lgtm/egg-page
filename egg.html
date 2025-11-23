@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eggcellent Day!</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #FFF8DC;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+  }
+
+  .egg {
+    width: 100px;
+    height: 140px;
+    background: #fff;
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+    animation: bounce 2s infinite ease-in-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .egg::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    background: #ffebcd;
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  h1 {
+    margin-top: 30px;
+    color: #ff6347;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px #fff;
+    animation: fadeIn 3s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="egg"></div>
+<h1>Have an Eggcellent Day Shubham!</h1>
+
+</body>
+</html>
